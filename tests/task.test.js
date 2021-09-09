@@ -100,7 +100,7 @@ test('Should delete user task', async () => {
 });
 
 // Should not delete task if unauthenticated
-test('Should delete user task', async () => {
+test('Should not delete user task', async () => {
   const response = await request(app)
     .delete(`/tasks/${taskOne._id}`)
     .send()
